@@ -53,6 +53,7 @@ jobs:
             plugin/output/installed-acceptance/*.html
             plugin/output/installed-acceptance/*.epub
             plugin/output/installed-acceptance/*.pdf
+            plugin/output/installed-acceptance/*.wav
             plugin/output/installed-acceptance/*.png
             plugin/output/installed-acceptance/*.log
             plugin/test-results/

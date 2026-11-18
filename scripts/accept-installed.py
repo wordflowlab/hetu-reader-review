@@ -3,8 +3,8 @@
 from pathlib import Path
 import hashlib,json,os,subprocess,struct,tarfile,sys
 ROOT=Path.cwd();lock=json.loads((ROOT/'acceptance-lock.json').read_text())
-EVIDENCE=ROOT/'output/installed-acceptance';EVIDENCE.mkdir(parents=True,exist_ok=True)
-DOWNLOADS=ROOT/'output/official-downloads';DOWNLOADS.mkdir(parents=True,exist_ok=True)
+EVIDENCE=Path(os.environ.get('HETU_ACCEPTANCE_DIRECTORY',str(ROOT/'output/installed-acceptance')));EVIDENCE.mkdir(parents=True,exist_ok=True)
+DOWNLOADS=Path(os.environ.get('HETU_DOWNLOAD_DIRECTORY',str(ROOT/'output/official-downloads')));DOWNLOADS.mkdir(parents=True,exist_ok=True)
 def run(args,**kw):return subprocess.check_output(args,text=True,stderr=subprocess.STDOUT,**kw).strip()
 def sha(p):
  with p.open('rb') as f:return hashlib.file_digest(f,'sha256').hexdigest()

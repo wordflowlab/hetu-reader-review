@@ -306,6 +306,8 @@ details[open] {
   }
 }
 @media (prefers-reduced-transparency: reduce), (prefers-contrast: more) {
+  body { background: var(--page); }
+  header, nav, main, aside { background: var(--surface); }
   aside {
     backdrop-filter: none;
   }

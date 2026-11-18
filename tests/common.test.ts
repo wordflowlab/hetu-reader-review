@@ -216,3 +216,10 @@ test("最终后端包可在Node25权限与原型禁用下装载", () => {
   );
   assert.equal(r.status, 0, r.stderr);
 });
+
+
+test("UTF-8预算不足明确拒绝，分块不会原地循环", async () => {
+ const c=setup(),r=expectOK(await c.invoke("save_project",create(scenario())));
+ const result=await c.invoke("get_source",{object_id:r.object.object_id,source_index:0,offset:0,max_bytes:1});
+ assert.equal(result.status,"failed");
+});

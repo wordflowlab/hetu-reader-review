@@ -163,6 +163,7 @@ export class Project {
           const full=sourceText(source),bytes=Buffer.from(full),offset=i.offset??0;
           need(offset<=bytes.length&&(offset===bytes.length||(bytes[offset]&0xc0)!==0x80),"来源偏移不是UTF-8边界。");
           let end=Math.min(bytes.length,offset+(i.max_bytes??8192));while(end<bytes.length&&(bytes[end]&0xc0)===0x80)end--;
+          need(end>offset||offset===bytes.length,"分块预算不足以容纳下一个UTF-8字符。","hetu.budget_exceeded");
           const text=bytes.subarray(offset,end).toString("utf8");
           if(typeof source.content==="string")source.content=text;else source.resource.body=text;
           total_bytes=bytes.length;complete=end===bytes.length;next_offset=complete?null:end;
@@ -200,6 +201,7 @@ export class Project {
         need(boundary(offset), "导出偏移不是UTF-8边界。");
         let end = Math.min(b.length, offset + (i.max_bytes ?? 8192));
         while (!boundary(end)) end--;
+        need(end > offset || offset === b.length, "分块预算不足以容纳下一个UTF-8字符。", "hetu.budget_exceeded");
         const chunk = b.subarray(offset, end).toString("utf8");
         return success({
           project_ref: fixed(r),

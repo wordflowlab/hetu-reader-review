@@ -95,6 +95,21 @@ export async function start() {
     if(v.next_path){const one=await readView(action,input,expected,v.next_path);const tail=await readView(action,input,expected,result_path,offset+1);return [one,...tail];}
     throw Error("未识别的固定结果投影");
   }
+  async function readOperation(input:any):Promise<any>{
+    const fixedInput={...input};delete fixedInput.detail;let expected:string|undefined;
+    async function page(result_path:string,offset=0):Promise<any>{
+      const response:any=(await client.callTool({name:"hetu_call_action",arguments:{action:"hetu.operations.get",input:{...fixedInput,result_path,offset,limit:20,max_bytes:8192}}})).structuredContent;
+      assert.equal(response.status,"succeeded",JSON.stringify(response));
+      const v=response.data;expected??=v.result_sha256;assert.equal(v.result_sha256,expected);
+      if("value" in v)return v.value;
+      if(v.fields){const value:any={};for(const field of v.fields)value[field.name]=await page(field.result_path);return value;}
+      if(v.page){let text=v.page.content;if(v.next_offset!==null)text+=await page(result_path,v.next_offset);return text;}
+      if(v.items){const rows=[...v.items];if(v.next_offset!==null)rows.push(...await page(result_path,v.next_offset));return rows;}
+      if(v.next_path)return [await page(v.next_path),...await page(result_path,offset+1)];
+      throw Error("未识别的原操作结果分页");
+    }
+    const result=await page("");assert.equal(createHash("sha256").update(canonical(result)).digest("hex"),expected,"原操作完整结果摘要");return result;
+  }
   const checkedActions=new Set<string>();
   let serial = 0;
   const call = async (name: string, args: any = {}) => {
@@ -118,6 +133,10 @@ export async function start() {
       checkedActions.add(actionByTool[name]);
     }
     let result = (await client.callTool(chosen)).structuredContent as any;
+    if(result.data?.recovery?.action==="hetu.operations.get"&&result.data.response?.retained===true){
+      await writeFile(record+".wire-result.json",JSON.stringify(result),{mode:0o600});
+      result=await readOperation(result.data.recovery.input);
+    }
     if(result.data?.response?.read&&result.data.response.complete===false){
       const wire=result,expected=wire.data.response.source_result_sha256;
       await writeFile(record+".wire-result.json",JSON.stringify(wire),{mode:0o600});

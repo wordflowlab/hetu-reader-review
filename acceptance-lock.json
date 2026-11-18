@@ -1,0 +1,12 @@
+{
+  "host": {
+    "version": "0.12.0",
+    "git_sha": "b2fba2e1cba4c84a0c06176cfc8d23a9f83ed058",
+    "archive_sha256": "f1249434f06e80b6671344715c1b1ad72bd75dbf9a06f4da2d642b87bfd72d67"
+  },
+  "plugin": {
+    "slug": "reader-review",
+    "version": "0.1.0",
+    "package_sha256": "62ff0fce9f92e921abd3a336baacac132b95f165395c2ab3431d3d18af55ba70"
+  }
+}

@@ -1,0 +1,298 @@
+{
+  "date": "2026-11-18",
+  "repositories": [
+    {
+      "repository": "deepseek-ai/deepseek-harness",
+      "commit": "ca33fd6843b205e279c7ccb6cb73a472c78f5760",
+      "url": "https://github.com/deepseek-ai/deepseek-harness/tree/ca33fd6843b205e279c7ccb6cb73a472c78f5760",
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "0f5516be2acde776f05572cbc8c3093c90549afe04ce118e11157d073d5d15f4",
+          "bytes": 2673
+        },
+        {
+          "path": "readme.md",
+          "sha256": "0f5516be2acde776f05572cbc8c3093c90549afe04ce118e11157d073d5d15f4",
+          "bytes": 2673
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "ebb4f09972aee8608be255debaf78451a68e95c290f55c240dec2ecfa16ea6be",
+          "bytes": 1065
+        },
+        {
+          "path": "package.json",
+          "sha256": "d7c222bcf438696c90ab76e04c11d34b35f6ae033121ad4079592c0d8470fdfa",
+          "bytes": 20439
+        },
+        {
+          "path": "docs/architecture.md",
+          "sha256": "ce18b33a980af9ff0ae0e78597603d70a2afcdbb6cd5c2ba0c2cd70d9a4d8b50",
+          "bytes": 19132
+        }
+      ],
+      "evidence_level": "fixed source and selected documentation; upstream runtime not executed",
+      "selected_files": []
+    },
+    {
+      "repository": "zenstory-ai/oh-story-dsh",
+      "commit": "27e9c8668ad349f49959a0207c0e3b4398ff159a",
+      "url": "https://github.com/zenstory-ai/oh-story-dsh/tree/27e9c8668ad349f49959a0207c0e3b4398ff159a",
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "files": [],
+      "evidence_level": "fixed source and selected documentation; upstream runtime not executed",
+      "selected_files": [
+        {
+          "path": "README.md",
+          "sha256": "b3d6419be789e5cd5a3c779e9d25c511d0e20047c0317fcdfe68ec0464e6f3de",
+          "bytes": 23863,
+          "local_file": "zenstory-ai--oh-story-dsh--README.md"
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "7a5b1bea8e36b27c7b30a4dcbd4e3abc10b7458b914938382db37c73d9a3dab7",
+          "bytes": 1070,
+          "local_file": "zenstory-ai--oh-story-dsh--LICENSE"
+        }
+      ]
+    },
+    {
+      "repository": "xxjrq/novel-feedback-actionlist-cn",
+      "commit": "5c5d1b6b60eeb24b76d40473c3387587aa7ebfc8",
+      "url": "https://github.com/xxjrq/novel-feedback-actionlist-cn/tree/5c5d1b6b60eeb24b76d40473c3387587aa7ebfc8",
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "43a4b6f29d396f804ad68e6d2cd630de070beabee60c8e9339955db10394eb04",
+          "bytes": 1397
+        },
+        {
+          "path": "readme.md",
+          "sha256": "43a4b6f29d396f804ad68e6d2cd630de070beabee60c8e9339955db10394eb04",
+          "bytes": 1397
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "0437d20491d02ae94bf59ba10d6f31cdff9c0648ba52eaa136ead66f52c36174",
+          "bytes": 1062
+        }
+      ],
+      "evidence_level": "fixed source and selected documentation; upstream runtime not executed",
+      "selected_files": []
+    },
+    {
+      "repository": "Chucy/randnotiz",
+      "commit": "37b4f4d8f898de137555323b6ea6f5cab8c55b50",
+      "url": "https://github.com/Chucy/randnotiz/tree/37b4f4d8f898de137555323b6ea6f5cab8c55b50",
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "3ba6ba8ba0259abdf76f0a9f187037cc3d0f2ce8f81404949f966fe0b2992621",
+          "bytes": 9823
+        },
+        {
+          "path": "readme.md",
+          "sha256": "3ba6ba8ba0259abdf76f0a9f187037cc3d0f2ce8f81404949f966fe0b2992621",
+          "bytes": 9823
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "e96c5348d3739b5ae87dda20b214974f8f82f91c25cf54e21cd6dbf87c67edd3",
+          "bytes": 1072
+        }
+      ],
+      "evidence_level": "fixed source and selected documentation; upstream runtime not executed",
+      "selected_files": [
+        {
+          "path": "app/ingest.py",
+          "sha256": "fe4f94d3ea299fb0bbdb86853cac04186dfc9fddc1fa719302359bf5d122c2d3",
+          "bytes": 30521,
+          "local_file": "Chucy--randnotiz--app--ingest.py"
+        }
+      ]
+    },
+    {
+      "repository": "wang-gaoerfu/comic-creator",
+      "commit": "0dc11bad2dde59887e6c6fc72f3da835aabb548a",
+      "url": "https://github.com/wang-gaoerfu/comic-creator/tree/0dc11bad2dde59887e6c6fc72f3da835aabb548a",
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "8d0f327c045b9c0c5408c34cbbf82f80afb39990767091af7268fdd862e1b776",
+          "bytes": 3951
+        },
+        {
+          "path": "readme.md",
+          "sha256": "8d0f327c045b9c0c5408c34cbbf82f80afb39990767091af7268fdd862e1b776",
+          "bytes": 3951
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "c9fccd4a154da309242326a230026cb97e972137c2c2ea8a8a1c5b016a50b9f5",
+          "bytes": 1062
+        }
+      ],
+      "evidence_level": "fixed source and selected documentation; upstream runtime not executed",
+      "selected_files": [
+        {
+          "path": "SKILL.md",
+          "sha256": "fb2ae37be35e523730bac481f0d25620ca72c74fbdb7348c98c764c7ff4daf40",
+          "bytes": 7616,
+          "local_file": "wang-gaoerfu--comic-creator--SKILL.md"
+        }
+      ]
+    },
+    {
+      "repository": "naomiaro/waveform-playlist",
+      "commit": "fa05cb7457ca11e388d09f400970a0ac653da3aa",
+      "url": "https://github.com/naomiaro/waveform-playlist/tree/fa05cb7457ca11e388d09f400970a0ac653da3aa",
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "c7588a2c624d1d7c45452037d404aff20771876b96fcff103b36be9e2eb96e63",
+          "bytes": 22473
+        },
+        {
+          "path": "readme.md",
+          "sha256": "c7588a2c624d1d7c45452037d404aff20771876b96fcff103b36be9e2eb96e63",
+          "bytes": 22473
+        },
+        {
+          "path": "LICENSE.md",
+          "sha256": "cf78dfc294dda03fd5aff1f0bbe986c271bcfb7b0d22ab17ef5f8bb70f90e355",
+          "bytes": 1072
+        },
+        {
+          "path": "package.json",
+          "sha256": "971985bf613a1946794840c42fef37353cabf787f8e4cae164766646da81bac0",
+          "bytes": 2986
+        }
+      ],
+      "evidence_level": "fixed source and selected documentation; upstream runtime not executed",
+      "selected_files": [
+        {
+          "path": "packages/core/src/fades.ts",
+          "sha256": "0ceff302e6797a3fa807f1b40e6d63ed5a8bfc684a75919313891b0f32614fcd",
+          "bytes": 4685,
+          "local_file": "naomiaro--waveform-playlist--packages--core--src--fades.ts"
+        }
+      ]
+    },
+    {
+      "repository": "prkshverma09/storyteller",
+      "commit": "9e8063ebfebe83ec419263766ee146ac5f31dc7a",
+      "url": "https://github.com/prkshverma09/storyteller/tree/9e8063ebfebe83ec419263766ee146ac5f31dc7a",
+      "license": {
+        "key": "mit",
+        "name": "MIT License",
+        "spdx_id": "MIT",
+        "url": "https://api.github.com/licenses/mit",
+        "node_id": "MDc6TGljZW5zZTEz"
+      },
+      "files": [
+        {
+          "path": "README.md",
+          "sha256": "70f2d11f78acae8e043d8026dc9f27d475bc543a49c37127c1a464b7ed49b1b6",
+          "bytes": 9512
+        },
+        {
+          "path": "readme.md",
+          "sha256": "70f2d11f78acae8e043d8026dc9f27d475bc543a49c37127c1a464b7ed49b1b6",
+          "bytes": 9512
+        },
+        {
+          "path": "LICENSE",
+          "sha256": "140248bd794bf92789a9607cde573f85f03118712b54122314f77d0b46f14643",
+          "bytes": 1068
+        }
+      ],
+      "evidence_level": "fixed source and selected documentation; upstream runtime not executed",
+      "selected_files": [
+        {
+          "path": "scripts/combine_audio.py",
+          "sha256": "e9d59a030168b85492c933f511244b499ab014b666967367e83807a237b82ebd",
+          "bytes": 3302,
+          "local_file": "prkshverma09--storyteller--scripts--combine_audio.py"
+        }
+      ]
+    }
+  ],
+  "saas": [
+    {
+      "url": "https://betabooks.co/",
+      "status": 200,
+      "sha256": "50a6cd0bdc9518eff2232947da74ecadfca4b19183f4ea9698916aaa7893fe17",
+      "file": "https-betabooks-co.html",
+      "excerpt": " BetaBooks: Reader management software for authors. | BetaBooks // Mobile Safari in standalone mode if((\"standalone\" in window.navigator) && window.navigator.standalone){ // If you want to prevent remote links in standalone web apps opening Mobile Safari, change 'remotes' to true var node, remotes = false; document.addEventListener('click', function(event) { node = event.target; // Bubble up until we hit link or top HTML element. Warning: BODY element is not compulsory so better to stop on HTML while(node.nodeName !== \"A\" && node.nodeName !== \"HTML\") { node = node.parentNode; } if('href' in node && node.href.indexOf('http') !== -1 && (node.href.indexOf(document.location.host) !== -1 || remotes)) { event.preventDefault(); document.location.href = node.href; } },false); } (function(){ try { if (typeof(Storage) !== \"undefined\") { var val = localStorage.getItem('betabooks.night-mode') // Coerce the value for legacy users (people whose night mode value is \"true\") if (val === 'true') { val = 'on' localStorage.setItem('betabooks.night-mode',val) }; if (val === 'on') { document.body.classList.add('night-mode'); } } } catch(err) { console.log(\"Night-mode isn't available with your current browser configuration.\") } })(); Login Sign Up Beta Books Login Username or Email Password Forgot your password? Login any paragraph to add or remove your bookmark Beta Reader Management for Authors Beta Books is an easy-to-use online app to manage all your beta reader feedback. Get Started for Free Less time organizing, more time writing. BetaBooks makes it easier than ever to organize and present your novel to readers. It's all about feedback, and you're in control. Get inline reactions, chapter-by-chapter, or questionnaires only. BetaBooks lets you decide what works best for you. See the big picture like never before. Sort and filter your feedback by reader, chapter, or keyword, turn it into your personal todo list and get your book done . BetaBooks is the world's first software designed specifically to solve authors' feedback management problems: A safe and easy way to share your manuscript Readers get secure, private access that you can revoke at any time , and you get to quit worrying about file formats and reader tech support. Know exactly who is reading No more wondering if people are reading, you'll know how far each reader has read and when they last looked at your book. Save your feedback AND your inbox. All your feedback is safely stored and organized in BetaBooks so yo",
+      "scope": "public page only; no account or product runtime"
+    },
+    {
+      "url": "https://betareader.io/",
+      "status": 200,
+      "sha256": "b8944e3bfb8a378d2e651a085513cc8604e5c77f5f97a8f9517174170d8c8458",
+      "file": "https-betareader-io.html",
+      "excerpt": " BetaReader.io – Beta Reader Management Software for Authors {\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"BetaReader.io\",\"url\":\"https://betareader.io/\",\"logo\":\"https://betareader.io/android-chrome-512x512.png\",\"email\":\"info@betareader.io\"} {\"@context\":\"https://schema.org\",\"@type\":\"SoftwareApplication\",\"name\":\"BetaReader.io\",\"url\":\"https://betareader.io/\",\"applicationCategory\":\"BusinessApplication\",\"operatingSystem\":\"Web, iOS, Android\",\"description\":\"Beta reader management software for authors: share manuscripts, invite your own readers or list in Discovery, track reading progress, and collect inline comments and surveys.\",\"offers\":[{\"@type\":\"Offer\",\"name\":\"Free\",\"price\":\"0\",\"priceCurrency\":\"USD\"},{\"@type\":\"Offer\",\"name\":\"Premium\",\"price\":\"9.99\",\"priceCurrency\":\"USD\"}]} Home Pricing About For Readers Blog Help Sign In Get Started Free Beta reader management for authors Get meaningful feedback from your beta readers BetaReader.io is software for authors to share manuscripts with beta readers. Invite your own readers, or list your book in Discovery and approve reader requests. Then track reading progress and collect inline comments and survey answers—all in one place. Start for Free Sign In Free to start • No credit card required • Cancel anytime 10,000+ Authors 50,000+ Beta Readers 1M+ Comments Collected Everything you need to run a successful beta read From manuscript sharing to feedback collection, we&#x27;ve got you covered. Inline Comments Let readers leave feedback exactly where they have thoughts. No more vague emails about &#x27;somewhere in chapter 3&#x27;. Custom Surveys Create chapter-by-chapter surveys or one final comprehensive questionnaire. Ask the questions that matter to you. Reading Analytics See exactly where readers are in your manuscript and how fast they&#x27;re progressing. Know who&#x27;s engaged. Reader Management Invite readers by email, manage their access, and keep everything organized in one place. Easy Reading Experience Readers access your manuscript through a beautiful web interface or our mobile app. No downloads required. Smart Insights Get aggregated feedback and sentiment analysis to understand your readers&#x27; overall experience. How it works Get started in minutes, not hours. 1 Upload your manuscript Upload a .docx file or paste your text. 2 Invite your readers Invite your own readers by email or link, or list in Discovery and approve requests. 3 Collect feedback Watch as comments, survey responses, a",
+      "scope": "public page only; no account or product runtime"
+    },
+    {
+      "url": "https://boords.com/",
+      "status": 200,
+      "sha256": "71c93fc73f2f121863d93858ddf632ae379a1ac189690c3673bbfbab627cdeeb",
+      "file": "https-boords-com.html",
+      "excerpt": " Storyboard &amp; Pre-Production Software for Video Agencies | Boords (function(){try{if(!/^\\/docs(\\/|$)/.test(location.pathname))return;var t=null;try{t=localStorage.getItem('docs-theme')}catch(e){}var d=t==='dark'||(t!=='light'&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches);if(d)document.documentElement.classList.add('dark')}catch(e){}})() (globalThis[\"TURBOPACK\"] || (globalThis[\"TURBOPACK\"] = [])).push({\"otherChunks\":[\"static/chunks/2a-p82hq4grkz.js\",\"static/chunks/0818gr35co8qu.js\",\"static/chunks/29ga_n7g721ic.js\",\"static/chunks/1uhvj4-2m3cgg.js\",\"static/chunks/0jz0uzvy7zxx2.js\",\"static/chunks/2quwhl8iukg9f.js\",\"static/chunks/0ivsswezam-4w.js\",\"static/chunks/3271-dbn3_dfg.js\",\"static/chunks/2ji4mai060h5s.js\",\"static/chunks/0hcloojetawdx.js\",\"static/chunks/0thtvzwveb98t.css\",\"static/chunks/3x7rr3wq18q9t.css\"],\"runtimeModuleIds\":[484794,756703]}); (globalThis[\"TURBOPACK\"] || (globalThis[\"TURBOPACK\"] = [])).push({\"otherChunks\":[\"static/chunks/3bbkgaeevcozc.js\",\"static/chunks/12uaa1-yj7blu.js\",\"static/chunks/2ib1cslkk15pw.js\",\"static/chunks/3t3fz8v-ox9cw.js\",\"static/chunks/15gxo49jjlvy6.js\",\"static/chunks/3vrb2m4nrdzv_.js\",\"static/chunks/2slaksyekwd8i.js\",\"static/chunks/339ayef1446wr.js\",\"static/chunks/0nnzjjkm-plkn.js\",\"static/chunks/0tk3ll2rzm5ul.js\",\"static/chunks/04fdxkxvtyn_a.js\",\"static/chunks/3qhspwlklce3k.js\",\"static/chunks/4078d-bct1kya.js\",\"static/chunks/1feics5t9_65j.js\"],\"runtimeModuleIds\":[484794,519675]}); @keyframes homepageWorkflowProgress{0%{transform:scaleX(0)}to{transform:scaleX(1)}}.homepage-workflow-progress{animation-name:homepageWorkflowProgress;animation-timing-function:linear;animation-fill-mode:both} {\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"SoftwareApplication\",\"name\":\"Boords\",\"applicationCategory\":\"DesignApplication\",\"applicationSubCategory\":\"Storyboard Software\",\"description\":\"Storyboard software for video agencies and brand teams\",\"url\":\"https://boords.com\",\"image\":\"https://boords.com/images/boords-app-storyboard-alder.jpg\",\"operatingSystem\":\"Web\",\"featureList\":[\"Collaborative storyboarding\",\"AI storyboard generation\",\"Client review and sign-off\",\"Animatics with audio and timing\",\"Shareable review links and commenting\",\"Version history\",\"Export to PDF and video\"],\"offers\":{\"@type\":\"AggregateOffer\",\"priceCurrency\":\"USD\",\"lowPrice\":\"0\",\"highPrice\":\"250\",\"offerCount\":4},\"author\":{\"@type\":\"Organization\",\"name\":\"Boords\",\"url\":\"https://boords.com\",\"logo\":\"https://boords.com/apple-touch-icon",
+      "scope": "public page only; no account or product runtime"
+    },
+    {
+      "url": "https://elevenlabs.io/studio",
+      "status": 200,
+      "sha256": "8141d3ce7531cfd07480276b55fbd9b38c7508337cf18cd8002db53cf5275483",
+      "file": "https-elevenlabs-io-studio.html",
+      "excerpt": " @font-face{font-family:Inter Fallback;src:local(\"Arial\");ascent-override:90.44%;descent-override:22.52%;line-gap-override:0.00%;size-adjust:107.12%}@font-face{font-family:Geist Mono Fallback;src:local(\"Arial\");ascent-override:74.67%;descent-override:21.92%;line-gap-override:0.00%;size-adjust:134.59%}@font-face{font-family:JetBrains Mono Fallback;src:local(\"Arial\");ascent-override:75.79%;descent-override:22.29%;line-gap-override:0.00%;size-adjust:134.59%}@font-face{font-family:\"Hedvig Letters Serif Fallback\";src:local(\"Times New Roman\");ascent-override:89.69%;descent-override:28.14%;line-gap-override:0.00%;size-adjust:113.72%}@font-face{font-family:Waldenburg Fallback;src:local(\"Arial\");ascent-override:90.4%;descent-override:23.1%;line-gap-override:0%;size-adjust:106.08%}@font-face{font-family:WaldenburgFH Fallback;src:local(\"Arial\");ascent-override:94.54%;descent-override:24.15%;line-gap-override:0%;size-adjust:101.44%}@font-face{font-family:antoineDropCaps Fallback;src:local(\"Arial\");ascent-override:50.73%;descent-override:13.49%;line-gap-override:0.00%;size-adjust:148.25%}@font-face{font-family:goudyMediaeval Fallback;src:local(\"Arial\");ascent-override:105.35%;descent-override:46.74%;line-gap-override:11.37%;size-adjust:79.16%}*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(0 0 0/0.125);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }*,:after,:before{box-sizing:border-box;border:0 solid #ebe8e4}:after,:before{--tw-content:\"\"}html{line-height:1.5;-webkit-text-size-adju",
+      "scope": "public page only; no account or product runtime"
+    }
+  ],
+  "upstream_executed": false,
+  "implementation": "original; upstream code not bundled"
+}

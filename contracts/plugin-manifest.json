@@ -9,7 +9,7 @@
   },
   "description": {
     "zh-CN": "把固定试读版本、不同读者意见和修改决定组织成可复核的多轮过程。",
-    "en": "Persistent creative engineering through external Agents and Hetu public SDK."
+    "en": "Collect versioned reader feedback, preserve original comments and recheck editorial decisions."
   },
   "license": "Apache-2.0",
   "work_kinds": [

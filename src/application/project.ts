@@ -157,11 +157,17 @@ export class Project {
       if (action === "get_project") return success(r);
       if (action === "get_source") {
         need(refs[i.source_index], "来源索引越界。");
-        return success({
-          project_ref: fixed(r),
-          source_ref: refs[i.source_index],
-          source: (await this.sources([refs[i.source_index]]))[0],
-        });
+        const source:any=clone((await this.sources([refs[i.source_index]]))[0]);
+        let complete=true,next_offset:number|null=null,total_bytes:number|undefined;
+        if(typeof source.content==="string"||typeof source.resource?.body==="string"){
+          const full=sourceText(source),bytes=Buffer.from(full),offset=i.offset??0;
+          need(offset<=bytes.length&&(offset===bytes.length||(bytes[offset]&0xc0)!==0x80),"来源偏移不是UTF-8边界。");
+          let end=Math.min(bytes.length,offset+(i.max_bytes??8192));while(end<bytes.length&&(bytes[end]&0xc0)===0x80)end--;
+          const text=bytes.subarray(offset,end).toString("utf8");
+          if(typeof source.content==="string")source.content=text;else source.resource.body=text;
+          total_bytes=bytes.length;complete=end===bytes.length;next_offset=complete?null:end;
+        }
+        return success({project_ref:fixed(r),source_ref:refs[i.source_index],source,complete,next_offset,...(total_bytes===undefined?{}:{total_bytes,offset:i.offset??0})});
       }
       if (action === "get_basis") {
         need(p.basis_refs[i.basis_index], "专业依据索引越界。");
@@ -192,7 +198,7 @@ export class Project {
         const boundary = (n: number) =>
           n === b.length || (n >= 0 && n < b.length && (b[n] & 0xc0) !== 0x80);
         need(boundary(offset), "导出偏移不是UTF-8边界。");
-        let end = Math.min(b.length, offset + (i.max_bytes ?? 32768));
+        let end = Math.min(b.length, offset + (i.max_bytes ?? 8192));
         while (!boundary(end)) end--;
         const chunk = b.subarray(offset, end).toString("utf8");
         return success({

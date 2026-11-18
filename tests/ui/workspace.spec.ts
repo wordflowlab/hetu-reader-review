@@ -142,9 +142,11 @@ test("真实Electron审阅、专业操作、导出、冲突保留与关闭重开
     );
     expect(clipboard).toContain(manifest.id);
     expect(clipboard).toContain(record.object.object_id);
+    const normalDisplay = await app.context().newCDPSession(page);
+    await normalDisplay.send("Emulation.setEmulatedMedia",{features:[{name:"prefers-reduced-transparency",value:"no-preference"},{name:"prefers-contrast",value:"no-preference"}]});
     for (const theme of ["light", "dark"] as const) {
       await app.evaluate(({webContents}:any,theme:any)=>{for(const w of webContents.getAllWebContents())if(w.getURL().startsWith("hetu-plugin:"))w.send("plugin:preferences",{theme,language:"zh-CN"});},theme);
-      await page.emulateMedia({ colorScheme: theme });
+      await normalDisplay.send("Emulation.setEmulatedMedia",{features:[{name:"prefers-color-scheme",value:theme},{name:"prefers-reduced-transparency",value:"no-preference"},{name:"prefers-contrast",value:"no-preference"}]});
       for (const width of [1360, 760]) {
         await page.setViewportSize({ width, height: 900 });
         await page.screenshot({

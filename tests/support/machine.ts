@@ -141,9 +141,16 @@ export async function start() {
       const wire=result,expected=wire.data.response.source_result_sha256;
       await writeFile(record+".wire-result.json",JSON.stringify(wire),{mode:0o600});
       const read=wire.data.response.read.input;
-      const data=await readView(read.action,read.input,expected);
-      result={...wire,data};
-      assert.equal(createHash("sha256").update(canonical(result)).digest("hex"),expected,"完整结果摘要保持");
+      if(name==="hetu_plugins_capabilities"){
+        // 宿主动作按调用前精确发现；此处只读取本专业包合同，避免回读全部Core Schema。
+        const actions=await readView(read.action,read.input,expected,"/actions");
+        const types=await readView(read.action,read.input,expected,"/types");
+        result={...wire,data:{...wire.data,actions,types,core_actions_omitted:true}};
+      }else{
+        const data=await readView(read.action,read.input,expected);
+        result={...wire,data};
+        assert.equal(createHash("sha256").update(canonical(result)).digest("hex"),expected,"完整结果摘要保持");
+      }
     }
     await writeFile(record + ".result.json", JSON.stringify(result), {
       mode: 0o600,

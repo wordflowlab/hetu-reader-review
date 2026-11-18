@@ -4,7 +4,7 @@
 
 ## 使用
 
-安装到河图后，在当前Codex等Agent会话发现插件并读取同包Skill，说明目标即可。所有正常业务经河图CLI/MCP完成，桌面用于阅读、比较、反馈和可选编辑。
+从[GitHub v0.1.0发行](https://github.com/wordflowlab/hetu-reader-review/releases/tag/v0.1.0)获取固定运行包。安装到河图后，在当前Codex等Agent会话发现插件并读取同包Skill，说明目标即可。所有正常业务经河图CLI/MCP完成，桌面用于阅读、比较、反馈和可选编辑。
 
 ## 开发
 

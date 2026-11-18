@@ -1,0 +1,48 @@
+{
+  "recorded_at": "2026-11-18T10:57:35.958Z",
+  "plugin_id": "org.wordflowlab.reader-review",
+  "package_sha256": "9b354d5494d2158da3431b67bd76ad326c617dc08c9908dc594d6b1a1fb454ab",
+  "host_version": "hetu 0.12.2",
+  "platform": "darwin",
+  "architecture": "arm64",
+  "actions": [
+    "skills.read",
+    "save_project",
+    "packet_digest",
+    "preview_feedback",
+    "import_feedback",
+    "put_decision",
+    "check_feedback",
+    "export_packet",
+    "put_packet",
+    "put_reader",
+    "put_submission",
+    "list_projects",
+    "get_source",
+    "get_operation",
+    "get_basis",
+    "build_context",
+    "create_handoff",
+    "compare_versions",
+    "export_project",
+    "remove_decision",
+    "remove_reader",
+    "remove_packet",
+    "get_project"
+  ],
+  "skill_resources": 3,
+  "lifecycle": [
+    "install",
+    "disable",
+    "enable",
+    "uninstall",
+    "install"
+  ],
+  "fixed_history": true,
+  "CAS": true,
+  "original_key_recovery": true,
+  "artifact_sha256_verified": true,
+  "limits": [
+    "没有付费模型、作者采纳、定稿或Windows/Linux专业运行验收"
+  ]
+}

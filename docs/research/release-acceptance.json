@@ -1,0 +1,44 @@
+{
+  "version": "0.1.0",
+  "plugin_id": "org.wordflowlab.reader-review",
+  "package_sha256": "9b354d5494d2158da3431b67bd76ad326c617dc08c9908dc594d6b1a1fb454ab",
+  "host": {
+    "version": "0.12.2",
+    "git_sha": "f5f18d4abf84bc1d786e083b8c916c559cec6a5c",
+    "archive_sha256": "7b6cca30d2267920f71caa2a2a7bc03a3cc3257be94f9a8da41b384c2a0c17aa",
+    "size_bytes": 226016540,
+    "release_url": "https://github.com/limecloud/hetu/releases/tag/v0.12.2"
+  },
+  "ci": {
+    "conclusion": "success",
+    "headSha": "699da77021262bdc1bb6cd5eb211dbcc3b9cab6a",
+    "status": "completed",
+    "url": "https://github.com/wordflowlab/hetu-reader-review/actions/runs/44288352119"
+  },
+  "tested_source_commit": "699da77021262bdc1bb6cd5eb211dbcc3b9cab6a",
+  "tests": [
+    {
+      "test": "machine",
+      "exit_code": 0
+    },
+    {
+      "test": "ui",
+      "exit_code": 0
+    }
+  ],
+  "platforms": [
+    "macOS arm64"
+  ],
+  "docs": {
+    "files": 60,
+    "diagrams": 16,
+    "actual_rendered": true
+  },
+  "limits": [
+    "隔离示例，不是文学、美术或表演质量认可",
+    "真人反馈为导入样本，不代表真人研究",
+    "未执行付费模型、正文采纳或作者定稿",
+    "Windows/Linux专业旅程未验证"
+  ],
+  "recorded_at": "2026-11-18T11:13:10.235463+00:00"
+}

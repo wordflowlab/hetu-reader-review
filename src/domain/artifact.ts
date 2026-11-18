@@ -29,7 +29,7 @@ export function artifact(
 ) {
   const b = Buffer.from(bytes),
     offset = i.offset ?? 0,
-    max = i.max_bytes ?? 32768;
+    max = i.max_bytes ?? 8192;
   need(
     Number.isSafeInteger(offset) && offset >= 0 && offset <= b.length,
     "文件偏移越界。",

@@ -85,7 +85,7 @@ export async function start() {
   const available = new Set(catalog.map((t:any)=>t.name));
   const actionByTool:Record<string,string>=toolRoutes;
   async function readView(action:string,input:any,expected:string,result_path="",offset=0):Promise<any>{
-    const response:any=(await client.callTool({name:"hetu_call_action",arguments:{action:"hetu.collaboration.invoke",input:{action,input,view:{result_path,expected_result_sha256:expected,offset,limit:20,max_bytes:8192}}}})).structuredContent;
+    const response:any=(await client.callTool({name:"hetu_call_action",arguments:{action,input,view:{result_path,expected_result_sha256:expected,offset,limit:20,max_bytes:8192}}})).structuredContent;
     assert.equal(response.status,"succeeded",JSON.stringify(response));
     const v=response.data.view;assert.equal(v.source_result_sha256,expected);
     if("value" in v)return v.value;

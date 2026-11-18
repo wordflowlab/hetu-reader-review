@@ -14,7 +14,7 @@ const error=(r:any)=>r.error?.code??r.data?.result?.error?.code;
 test("正式机器入口全动作、固定成果、恢复与热插拔",{timeout:1200000},async t=>{
  const c=await start();let serial=0;const key=()=>"machine-"+(++serial);const files:any[]=[];
  const artifact=async(action:string,r:any,args:any={})=>{let offset=0,expected:string|undefined,total:number|undefined;const chunks:Buffer[]=[];
- do{const v=await c.invoke(action,{...selection(r),...args,offset,max_bytes:65536});const b=Buffer.from(v.base64,"base64");assert.equal(v.offset,offset);assert.equal(sha(b),v.chunk_sha256);expected??=v.sha256;total??=v.total_bytes;assert.equal(v.sha256,expected);chunks.push(b);if(v.next_offset===null)break;assert.equal(v.next_offset,offset+b.length);offset=v.next_offset;}while(offset<32*1024*1024);
+ do{const v=await c.invoke(action,{...selection(r),...args,offset,max_bytes:8192});const b=Buffer.from(v.base64,"base64");assert.equal(v.offset,offset);assert.equal(sha(b),v.chunk_sha256);expected??=v.sha256;total??=v.total_bytes;assert.equal(v.sha256,expected);chunks.push(b);if(v.next_offset===null)break;assert.equal(v.next_offset,offset+b.length);offset=v.next_offset;}while(offset<32*1024*1024);
  const bytes=Buffer.concat(chunks);assert.equal(bytes.length,total);assert.equal(sha(bytes),expected);return bytes;};
  try{
  t.diagnostic(c.directory);assert.equal(c.cap.access_mode,"open");

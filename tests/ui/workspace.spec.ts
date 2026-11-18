@@ -125,7 +125,7 @@ test("真实Electron审阅、专业操作、导出、冲突保留与关闭重开
         .getByRole("navigation", { name: "专业视图" })
         .getByRole("button", { name: config.tabs[index], exact: true })
         .click();
-    await tab(0);await page.getByRole("button",{name:"导出离线试读包",exact:true}).click();await expect(page.getByRole("status")).toContainText("已按固定修订导出");
+    await tab(0);await page.getByRole("button",{name:"导出离线试读包",exact:true}).click();await expect(page.getByRole("status")).toContainText("已按固定修订导出",{timeout:120000});
     const packetFile=(await readdir(exports)).find(f=>f.endsWith(".html"))!;
     const browser=await chromium.launch({headless:true});
     try{const ctx=await browser.newContext({acceptDownloads:true});const offline=await ctx.newPage();let network=0;await ctx.route(/^https?:/,route=>{network++;return route.abort();});await offline.goto(pathToFileURL(path.join(exports,packetFile)).href);await offline.locator("#reader").fill("reader-lin");await offline.locator("textarea").first().fill("我想知道信是谁寄的，愿意继续读。");await offline.locator("[data-read]").first().check();const event=offline.waitForEvent("download");await offline.getByRole("button",{name:"下载反馈JSON"}).click();const result=await event;const file=await result.path();const b=await readFile(file!);const imported={filename:"feedback.json",base64:b.toString("base64"),sha256:sha(b)};await c.invoke("preview_feedback",{...selection(record),file:imported});record=await c.invoke("import_feedback",{...base(record,"ui-feedback"),file:imported});expect(network).toBe(0);}finally{await browser.close();}

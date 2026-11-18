@@ -416,7 +416,7 @@ function App() {
           )}
         </div>
       )}
-      {status && <p role="status">{status}</p>}
+      {(status||busy) && <p role="status">{status||"正在整理成果，请稍候"}</p>}
       <div className="goal">
         <input
           aria-label="本次目标"

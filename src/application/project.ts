@@ -89,7 +89,7 @@ export class Project {
         if (r) return r;
       }
       if (action === "get_operation")
-        return this.store.call("hetu.extensions.operations.get", i);
+        return this.store.call("hetu.extensions.operations.get", {operation_key:i.operation_key});
       if (action === "list_projects")
         return this.store.call(
           i.query
